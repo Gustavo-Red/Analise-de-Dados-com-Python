@@ -1,15 +1,20 @@
-# Analise-de-Dados-com-Python
-Usei as bibliotecas: pandas e plotly
+# Análise de Cancelamento de Clientes
 
-# Python Insights - Analisando Dados com Python
+Projeto de análise de dados utilizando Python com foco na identificação de padrões de cancelamento (churn).
 
-### Case - Cancelamento de Clientes
+## Tecnologias
+- Python
+- Pandas
+- Plotly
 
-Você foi contratado por uma empresa com mais de 800 mil clientes para um projeto de Dados. Recentemente a empresa percebeu que da sua base total de clientes, a maioria são clientes inativos, ou seja, que já cancelaram o serviço.
+## Objetivo
+Identificar os principais fatores que levam ao cancelamento de clientes e propor ações para reduzir esse índice.
 
-Precisando melhorar seus resultados ela quer conseguir entender os principais motivos desses cancelamentos e quais as ações mais eficientes para reduzir esse número.
+## Etapas realizadas
+- Limpeza e tratamento de dados
+- Análise exploratória
+- Visualização de dados
+- Geração de insights
 
-
-
-
-(Utilize a base de dados "cancelamentos.csv")
+## Base de dados
+A base de dados não foi incluída devido ao tamanho.
