@@ -4,7 +4,7 @@ Projeto de análise de dados utilizando Python com foco na identificação de pa
 
 ---
 
-## 📖 Contexto do Projeto
+## Contexto do Projeto
 
 Neste projeto, atuo como analista de dados em uma empresa com mais de **300 mil clientes**, que enfrenta um problema significativo de cancelamento de serviços.
 
@@ -12,7 +12,7 @@ A empresa identificou que grande parte da sua base tornou-se inativa, impactando
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 - Identificar os principais fatores que levam ao cancelamento de clientes  
 - Analisar padrões de comportamento dos usuários  
@@ -21,7 +21,7 @@ A empresa identificou que grande parte da sua base tornou-se inativa, impactando
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - Python  
 - Pandas  
@@ -29,14 +29,14 @@ A empresa identificou que grande parte da sua base tornou-se inativa, impactando
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 - `inicial.ipynb` → Notebook com toda a análise de dados  
 - `cancelamentos_amostra.csv` → Amostra da base de dados  
 
 ---
 
-## 🔎 Etapas da Análise
+## Etapas da Análise
 
 ### 1. Tratamento de dados
 - Remoção de colunas irrelevantes  
@@ -53,7 +53,7 @@ A empresa identificou que grande parte da sua base tornou-se inativa, impactando
 
 ---
 
-## 💡 Principais Insights
+## Principais Insights
 
 - Clientes com contrato mensal apresentam maior taxa de cancelamento  
 - Alto número de ligações ao call center está associado ao churn  
@@ -61,7 +61,7 @@ A empresa identificou que grande parte da sua base tornou-se inativa, impactando
 
 ---
 
-## 📌 Base de Dados
+## Base de Dados
 
 A base de dados original contém mais de **800 mil registros**.
 
@@ -69,7 +69,7 @@ Devido às limitações de upload do GitHub, foi utilizada uma **amostra com mai
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 1. Instale as dependências em um ambiente virtual:
 
