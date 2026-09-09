@@ -4,7 +4,9 @@ Projeto de análise de dados utilizando Python, com foco na identificação dos 
 
 ---
 
-## Contexto do Projeto Neste projeto, atuo como analista de dados em uma empresa com mais de **300 mil clientes**, que enfrenta um problema significativo de cancelamento de serviços. A empresa identificou que grande parte da sua base tornou-se inativa, impactando diretamente seus resultados. Diante disso, surge a necessidade de compreender, por meio de dados, **quais fatores estão levando os clientes a cancelarem**.
+## Contexto do Projeto
+
+Neste projeto, atuo como analista de dados em uma empresa com mais de **300 mil clientes**, que enfrenta um problema significativo de cancelamento de serviços. A empresa identificou que grande parte da sua base tornou-se inativa, impactando diretamente seus resultados. Diante disso, surge a necessidade de compreender, por meio de dados, **quais fatores estão levando os clientes a cancelarem**.
 
 ---
 
