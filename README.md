@@ -1,233 +1,102 @@
-Projeto de análise de dados - Análise de Cancelamento de Clientes
+# Análise de Cancelamento de Clientes (Churn Analysis)
 
-# Análise de Cancelamento de Clientes (Churn)
+Projeto de análise de dados utilizando Python com foco na identificação de padrões de cancelamento de clientes (churn) e proposição de ações para redução desse índice.
 
-## Contexto
+---
 
-Este projeto foi desenvolvido como um estudo prático de análise de dados, utilizando uma base de clientes para investigar os principais fatores relacionados ao cancelamento de serviços.
+## Contexto do Projeto
 
-A empresa possui uma grande quantidade de clientes e identificou uma taxa elevada de cancelamentos. A partir disso, a análise busca entender quais características e comportamentos estão mais associados ao churn e quais ações podem ser tomadas para reduzir esse índice.
+Neste projeto, atuo como analista de dados em uma empresa com mais de **300 mil clientes**, que enfrenta um problema significativo de cancelamento de serviços.
+
+A empresa identificou que grande parte da sua base tornou-se inativa, impactando diretamente seus resultados. Diante disso, surge a necessidade de compreender, por meio de dados, **quais fatores estão levando os clientes a cancelarem**.
 
 ---
 
 ## Objetivo
 
-Realizar uma análise exploratória dos dados, incluindo:
-
-* leitura e organização da base de dados;
-* tratamento de valores ausentes;
-* remoção de informações que não contribuem para a análise;
-* cálculo da quantidade e da proporção de clientes que cancelaram;
-* visualização das variáveis da base;
-* identificação dos principais fatores associados ao cancelamento;
-* simulação de ações para redução do churn.
-
----
-
-## Descrição
-
-Análise exploratória de dados de clientes com foco na identificação de padrões de cancelamento e na geração de insights para possíveis estratégias de retenção.
-
----
-
-## Resultados
-
-### Cancelamento por duração do contrato
-
-![Cancelamento por duração do contrato](images/05_duracao_contrato.png)
-
-O tipo de contrato apresenta um dos padrões mais claros da análise. Na base utilizada, os clientes com contrato **Monthly** aparecem exclusivamente no grupo de cancelamento, enquanto os contratos **Annual** e **Quarterly** apresentam clientes cancelados e não cancelados.
-
-Esse comportamento indica uma forte associação entre contratos mensais e churn.
-
-### Cancelamento por ligações ao Call Center
-
-![Cancelamento por ligações ao Call Center](images/08_ligacoes_callcenter.png)
-
-A quantidade de ligações para o Call Center também apresenta uma diferença significativa entre os grupos.
-
-Até 4 ligações ainda existe uma quantidade relevante de clientes que não cancelaram. A partir de **5 ligações**, os clientes cancelados passam a representar a grande maioria dos registros.
-
-### Cancelamento por dias de atraso
-
-![Cancelamento por dias de atraso](images/07_dias_atraso.png)
-
-Os dias de atraso apresentam outro padrão importante. Até aproximadamente **20 dias de atraso**, os dois grupos ainda estão presentes de forma significativa.
-
-Após esse ponto, o comportamento da base muda e os clientes cancelados passam a predominar, indicando uma forte relação entre atrasos maiores e churn.
-
-### Cancelamento por sexo
-
-![Cancelamento por sexo](images/01_sexo.png)
-
-A distribuição entre homens e mulheres apresenta valores próximos, sem uma diferença expressiva na quantidade de cancelamentos. Dessa forma, o sexo não aparece como um dos principais fatores de diferenciação nesta análise.
-
-### Cancelamento por tipo de assinatura
-
-![Cancelamento por assinatura](images/06_assinatura.png)
-
-As categorias Standard, Basic e Premium apresentam distribuições relativamente semelhantes entre clientes cancelados e não cancelados.
-
-### Cancelamento por frequência de uso
-
-![Cancelamento por frequência de uso](images/09_frequencia_uso.png)
-
-A frequência de uso apresenta sobreposição considerável entre os dois grupos, não mostrando um padrão tão evidente quanto os três principais fatores identificados.
-
-### Cancelamento por tempo como cliente
-
-![Cancelamento por tempo como cliente](images/10_tempo_cliente.png)
-
-O tempo de permanência do cliente também apresenta bastante sobreposição entre os grupos de cancelamento, sem um ponto de separação tão claro.
-
-### Cancelamento por idade
-
-![Cancelamento por idade](images/11_idade.png)
-
-A idade apresenta diferenças na distribuição dos grupos, porém sem um padrão tão direto quanto duração do contrato, ligações ao Call Center e dias de atraso.
-
-### Cancelamento por total gasto
-
-![Cancelamento por total gasto](images/04_total_gasto.png)
-
-A variável de gasto total apresenta diferenças entre os grupos, mas não demonstra um padrão de cancelamento tão evidente quanto os principais fatores encontrados.
-
-### Cancelamento por meses desde a última interação
-
-![Cancelamento por meses desde a última interação](images/03_meses_ultima_interacao.png)
-
-A variável apresenta diferenças na distribuição dos grupos ao longo do período, porém o padrão não é tão evidente quanto nos fatores relacionados ao contrato, atendimento e atraso.
-
----
-
-## Principais Insights
-
-- **Contrato mensal:** clientes com contrato Monthly apresentam uma associação muito forte com o cancelamento. Uma possível estratégia seria incentivar a migração para contratos de maior duração.
-
-- **Ligações ao Call Center:** a partir de aproximadamente 5 ligações, os cancelamentos passam a predominar fortemente. Isso pode ser utilizado como um indicador para identificar clientes que precisam de atenção antes de cancelar.
-
-- **Dias de atraso:** atrasos superiores a aproximadamente 20 dias estão associados a uma predominância de cancelamentos. A empresa poderia utilizar alertas preventivos e ações de cobrança antes que o atraso atinja esse ponto.
-
-- **Sexo, assinatura e outras variáveis:** embora apresentem diferenças na distribuição, não demonstraram um padrão tão forte quanto os três fatores principais.
-
----
-
-## Simulação de Redução do Churn
-
-Após identificar os principais fatores associados ao cancelamento, foi realizada uma simulação considerando a remoção de três situações problemáticas:
-
-- clientes com contrato mensal;
-- clientes com mais de 4 ligações ao Call Center;
-- clientes com mais de 20 dias de atraso.
-
-```python
-condicao = tabela["duracao_contrato"] != "Monthly"
-tabela = tabela[condicao]
-
-condicao = tabela["ligacoes_callcenter"] <= 4
-tabela = tabela[condicao]
-
-condicao = tabela["dias_atraso"] <= 20
-tabela = tabela[condicao]
-```
-
-A taxa de cancelamento foi calculada novamente após os filtros para observar como a distribuição dos clientes poderia mudar.
-
-Essa etapa representa uma **simulação baseada nos dados**, e não uma previsão de que essas ações necessariamente produzirão o mesmo resultado em um cenário real.
-
----
-
-## Estrutura do Projeto
-
-- `cancelamentos_amostra.csv` — arquivo com a base de dados utilizada na análise
-- `inicial.ipynb` — notebook com o processamento, análise e visualizações
-- `README.md` — documentação do projeto
-- `images/` — imagens utilizadas na documentação
+- Identificar os principais fatores que levam ao cancelamento de clientes  
+- Analisar padrões de comportamento dos usuários  
+- Gerar insights para auxiliar na tomada de decisão  
+- Propor ações estratégicas para reduzir o churn  
 
 ---
 
 ## Tecnologias Utilizadas
 
-- Python 3.12
-- Pandas
-- Plotly Express
-- Jupyter Notebook
+- Python  
+- Pandas  
+- Plotly  
 
 ---
 
-## Etapas Realizadas
+## Estrutura do Projeto
 
-### 1. Leitura dos dados
+- `inicial.ipynb` → Notebook com toda a análise de dados  
+- `cancelamentos_amostra.csv` → Amostra da base de dados  
+- `imagens/` → Gráficos exportados da análise  
 
-A base foi carregada a partir do arquivo `cancelamentos_amostra.csv` utilizando a biblioteca `pandas`.
+---
 
-### 2. Limpeza dos dados
+## Etapas da Análise
 
-Foi removida a coluna `CustomerID`, por não ser relevante para a análise do comportamento dos clientes.
+### 1. Tratamento de dados
+- Remoção de colunas irrelevantes  
+- Tratamento de valores nulos  
+- Limpeza da base  
 
-Em seguida, foram removidas linhas com valores ausentes utilizando `dropna()`.
+### 2. Análise exploratória
+- Cálculo da taxa de cancelamento  
+- Comparação entre clientes ativos e cancelados  
 
-### 3. Análise da variável de cancelamento
+### 3. Visualização de dados
+- Construção de gráficos interativos  
+- Identificação de padrões relevantes  
 
-A coluna `cancelou` foi utilizada como variável principal da análise:
+---
 
-- `1.0` → cliente que cancelou;
-- `0.0` → cliente que não cancelou.
+## Principais Insights
 
-A distribuição dos valores foi calculada utilizando `value_counts()` e `value_counts(normalize=True)`.
+### Contrato Mensal x Cancelamento
+![Gráfico - Duração do Contrato](imagens/grafico_duracao_contrato.png)
 
-### 4. Visualização dos dados
+Clientes com contrato mensal apresentam taxa de cancelamento muito acima dos demais. Praticamente todos os clientes que cancelaram estavam nesse tipo de contrato.
 
-Foram utilizados gráficos de histograma do **Plotly Express** para comparar o comportamento da variável `cancelou` com as demais colunas da base.
+### Ligações ao Call Center x Cancelamento
+![Gráfico - Ligações Call Center](imagens/grafico_ligacoes_callcenter.png)
 
-A estrutura utilizada permitiu gerar os gráficos de forma automática:
+Clientes que ligam mais de 4 vezes para o call center têm forte tendência ao cancelamento — a partir de 3 ligações já é considerado um sinal de alerta.
 
-```python
-for coluna in tabela.columns:
-    grafico = px.histogram(
-        tabela,
-        x=coluna,
-        color="cancelou",
-        text_auto="True"
-    )
+### Atraso no Pagamento x Cancelamento
+![Gráfico - Dias de Atraso](imagens/grafico_dias_atraso.png)
 
-    grafico.show()
-```
+Atrasos acima de 20 dias estão fortemente associados ao cancelamento. Atrasos a partir de 15 dias já indicam risco elevado.
 
-### 5. Identificação dos fatores de maior impacto
+---
 
-Após a análise dos gráficos, foram identificados três fatores com comportamento mais evidente:
+## Estimativa de Melhora
 
-- duração do contrato;
-- número de ligações para o Call Center;
-- dias de atraso.
-
-### 6. Simulação
-
-Foram aplicados filtros na base para estimar como a distribuição dos cancelamentos poderia se comportar após a redução desses três fatores de risco.
+Ao simular a resolução dos três problemas acima (removendo contratos mensais, limitando ligações ao call center e atrasos de pagamento), a taxa de cancelamento estimada cai de forma expressiva em relação ao cenário original, mostrando o impacto potencial de ações direcionadas a essas três causas.
 
 ---
 
 ## Base de Dados
 
-A análise foi realizada utilizando o arquivo `cancelamentos_amostra.csv`.
+A base de dados original contém mais de **800 mil registros**.
 
-A base utilizada contém centenas de milhares de registros, permitindo realizar a análise sobre um volume significativo de clientes.
+Devido às limitações de upload do GitHub, foi utilizada uma **amostra com mais de 300 mil registros**, mantendo um volume significativo e representativo para a análise.
 
 ---
 
 ## Como Executar
 
-1. Instale as dependências:
+1. Instale as dependências em um ambiente virtual:
 
 ```bash
-pip install pandas plotly jupyter
+pip install pandas plotly kaleido
 ```
 
-2. Abra o notebook:
+2. Execute o notebook:
 
 ```bash
-jupyter notebook inicial.ipynb
+inicial.ipynb
 ```
-
-3. Execute as células em ordem ou utilize **Run All**.
