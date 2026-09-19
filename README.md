@@ -48,7 +48,7 @@ Ao cruzar cada variável com a coluna `cancelou`, três fatores se destacaram cl
 
 ### 1. Duração do contrato
 
-![Cancelamento por duração do contrato](imagens/duracao_contrato.png)
+![Cancelamento por duração do contrato](duracao_contrato.png)
 
 Todos os clientes com contrato mensal cancelaram o serviço. Os contratos trimestral e anual têm uma taxa de cancelamento bem menor e parecida entre si.
 
@@ -56,7 +56,7 @@ Todos os clientes com contrato mensal cancelaram o serviço. Os contratos trimes
 
 ### 2. Ligações ao callcenter
 
-![Cancelamento por ligações ao callcenter](imagens/ligacoes_callcenter.png)
+![Cancelamento por ligações ao callcenter](ligacoes_callcenter.png)
 
 A partir de 5 ligações ao callcenter, praticamente todos os clientes cancelam o serviço.
 
@@ -64,7 +64,7 @@ A partir de 5 ligações ao callcenter, praticamente todos os clientes cancelam 
 
 ### 3. Dias de atraso no pagamento
 
-![Cancelamento por dias de atraso](imagens/dias_atraso.png)
+![Cancelamento por dias de atraso](dias_atraso.png)
 
 Acima de 20 dias de atraso no pagamento, o cancelamento é praticamente garantido.
 
@@ -76,20 +76,20 @@ As demais colunas da base também foram analisadas graficamente, mas não mostra
 
 <table>
 <tr>
-<td><img src="imagens/idade.png" width="440"/></td>
-<td><img src="imagens/sexo.png" width="440"/></td>
+<td><img src="idade.png" width="440"/></td>
+<td><img src="sexo.png" width="440"/></td>
 </tr>
 <tr>
-<td><img src="imagens/tempo_como_cliente.png" width="440"/></td>
-<td><img src="imagens/frequencia_uso.png" width="440"/></td>
+<td><img src="tempo_como_cliente.png" width="440"/></td>
+<td><img src="frequencia_uso.png" width="440"/></td>
 </tr>
 <tr>
-<td><img src="imagens/assinatura.png" width="440"/></td>
-<td><img src="imagens/total_gasto.png" width="440"/></td>
+<td><img src="assinatura.png" width="440"/></td>
+<td><img src="total_gasto.png" width="440"/></td>
 </tr>
 <tr>
-<td><img src="imagens/meses_ultima_interacao.png" width="440"/></td>
-<td><img src="imagens/cancelou.png" width="440"/></td>
+<td><img src="meses_ultima_interacao.png" width="440"/></td>
+<td><img src="cancelou.png" width="440"/></td>
 </tr>
 </table>
 
